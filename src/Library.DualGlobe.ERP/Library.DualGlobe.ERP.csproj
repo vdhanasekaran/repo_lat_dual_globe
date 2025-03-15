@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{452A7F98-AEF8-4E81-BCCF-D569A369534E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Library.DualGlobe.ERP</RootNamespace>
+    <AssemblyName>Library.DualGlobe.ERP</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\DualGlobeERP\Web\DualGlobe.ERP\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\DualGlobeERP\Web\DualGlobe.ERP\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\AllowanceInterface.cs" />
+    <Compile Include="Interfaces\ExpenseCategoryInterface.cs" />
+    <Compile Include="Interfaces\MenuInterface.cs" />
+    <Compile Include="Interfaces\LevyLookupInterface.cs" />
+    <Compile Include="Interfaces\RoleInterface.cs" />
+    <Compile Include="Interfaces\RoleMenuInterface.cs" />
+    <Compile Include="Interfaces\SupplierInterface.cs" />
+    <Compile Include="Interfaces\CompanyInterface.cs" />
+    <Compile Include="Interfaces\InsuranceInterface.cs" />
+    <Compile Include="Interfaces\LeaveInterface.cs" />
+    <Compile Include="Interfaces\ExpenseInterface.cs" />
+    <Compile Include="Interfaces\OperationExpenseInterface.cs" />
+    <Compile Include="Interfaces\OtherIncomeInterface.cs" />
+    <Compile Include="Interfaces\OvertimeInterface.cs" />
+    <Compile Include="Interfaces\RestDayInterface.cs" />
+    <Compile Include="Interfaces\PublicHolidayPayInterface.cs" />
+    <Compile Include="Interfaces\RestDayPayInterface.cs" />
+    <Compile Include="Interfaces\UserRoleInterface.cs" />
+    <Compile Include="Interfaces\WorkingHourInterface.cs" />
+    <Compile Include="Interfaces\CPFInterface.cs" />
+    <Compile Include="Interfaces\PublicHolidayInterface.cs" />
+    <Compile Include="Interfaces\EmployeeProjectInterface.cs" />
+    <Compile Include="Interfaces\ClientInterface.cs" />
+    <Compile Include="Interfaces\InvoiceInterface.cs" />
+    <Compile Include="Interfaces\PaymentInterface.cs" />
+    <Compile Include="Interfaces\QuotationInterface.cs" />
+    <Compile Include="Interfaces\ProjectInterface.cs" />
+    <Compile Include="Interfaces\EmployeeInterface.cs" />
+    <Compile Include="Interfaces\LoanAndAdvanceInterface.cs" />
+    <Compile Include="Interfaces\SalaryDetailInterface.cs" />
+    <Compile Include="Interfaces\TimesheetInterface.cs" />
+    <Compile Include="Interfaces\DonationInterface.cs" />
+    <Compile Include="Interfaces\UserInterface.cs" />
+    <Compile Include="Interfaces\WorkPermitAddressInterface.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\CPFLookup.cs" />
+    <Compile Include="Models\ExpenseCategory.cs" />
+    <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\LevyLookup.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\RoleMenu.cs" />
+    <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\CPF.cs" />
+    <Compile Include="Models\Insurance.cs" />
+    <Compile Include="Models\Leave.cs" />
+    <Compile Include="Models\Expense.cs" />
+    <Compile Include="Models\OperationExpense.cs" />
+    <Compile Include="Models\OtherIncome.cs" />
+    <Compile Include="Models\Allowance.cs" />
+    <Compile Include="Models\Overtime.cs" />
+    <Compile Include="Models\PublicHoliday.cs" />
+    <Compile Include="Models\Invoice.cs" />
+    <Compile Include="Models\Payment.cs" />
+    <Compile Include="Models\Quotation.cs" />
+    <Compile Include="Models\Donation.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\EmployeeProject.cs" />
+    <Compile Include="Models\ERPContext.cs" />
+    <Compile Include="Models\LoanAndAdvance.cs" />
+    <Compile Include="Models\Client.cs" />
+    <Compile Include="Models\Project.cs" />
+    <Compile Include="Models\RestDay.cs" />
+    <Compile Include="Models\PublicHolidayPay.cs" />
+    <Compile Include="Models\RestDayPay.cs" />
+    <Compile Include="Models\SalaryDetail.cs" />
+    <Compile Include="Models\Timesheet.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserRole.cs" />
+    <Compile Include="Models\WorkingHour.cs" />
+    <Compile Include="Models\WorkPermitAddress.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\SecurityHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
